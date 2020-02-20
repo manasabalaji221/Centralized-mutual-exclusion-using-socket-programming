@@ -1,0 +1,10 @@
+This project can run 3 different clients which can be handled by a server.
+To run the project, first the server is to be run and then each of the clients(same instance of Client1 to be run thrice).
+Each client is connected with Client using socket and it sends its username to the server.
+The clients and server send its messages in HTTP Post formats.
+The client can choose whether to make the server wait for some random number of seconds.
+This value is passed to the server.
+In server, this value is put into a queue, and this is enqueued each time to run the threads in the same order they came in.
+After that, the thread is made to sleep for that many seconds.
+Additionally, client can also log out from the connection with the server and thus the server closes this socket.
+This project runs from the console and GUI.
